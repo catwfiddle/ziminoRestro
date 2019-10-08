@@ -51,8 +51,9 @@ nav a {
 
 /*This is the hover color of the titles in the navigation bar.*/
 nav a:hover {
-  color: #00000;
+  color: #000000;
 }
+
 
 nav a:hover{
   background: #65737e;
@@ -62,7 +63,7 @@ nav a:hover{
 
 
 /*This centers the logo. It uses a display block, so the
-text won't be next to the picture.*/
+text won't be placed next to the picture.*/
 .centerpic {
   display: block;
   margin-left: auto;
