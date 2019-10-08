@@ -1,3 +1,6 @@
+/*The tip the customber enters gets inserted into the ordered table.
+The view is used to hide the tip that is in the ordered table.*/
+
 use zimino;
 create view tips_view as 
 select tip 
