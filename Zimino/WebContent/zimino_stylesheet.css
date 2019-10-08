@@ -1,0 +1,102 @@
+@charset "ISO-8859-1";
+
+/*All text colors are white inside the body
+and the background is #65737e */
+body {
+   margin: 0;
+   background: #65737e;
+   font-family: sans-serif;
+   font-weight: normal;
+   color: #ffffff;
+   
+   
+}
+
+/*This is the navigation bar that is on the top
+of the page. It is centered. */
+.topnav{
+    background: #65737e;
+   list-style:none;
+   text-align:center;
+   margin:0;
+   padding:0;
+}
+
+header {
+  background: #65737e;
+}
+
+
+nav {
+  float: center;
+}
+/*Inline blocks puts the linked site titles next to eachother.*/
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+/*30px is the space between the titles in the navigation bar.*/
+nav li {
+  display: inline-block;
+ padding-right: 30px;
+  
+}
+
+/*This hides the automatic underline for text with a link*/
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*This is the hover color of the titles in the navigation bar.*/
+nav a:hover {
+  color: #00000;
+}
+
+nav a:hover{
+  background: #65737e;
+  width: 100%;
+  Color: FFF8DC;
+}
+
+
+/*This centers the logo. It uses a display block, so the
+text won't be next to the picture.*/
+.centerpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+/*This centers the main course picture in the welcome.html
+It uses a display block, so the
+text won't be next to the picture.*/
+.centerpic2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+/*This places the text on the center of the page*/
+.centerText{
+text-align: center;
+top: 50%
+left: 50%
+transform: translatex(-50%);
+
+}
+
+/*This hides the automatic underline for text with a link*/
+.centerText a{
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*This is a hover for the elements in the centerText class a tags.*/
+.centerText a:hover {
+  color: #000000;
+}
+
