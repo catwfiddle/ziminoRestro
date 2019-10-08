@@ -1,7 +1,7 @@
-# cst_363_final_project
+# cst_363_project
 Shelly Sun, Andrew Bell, Jasper Kolp
-CST 363
 Project: part 2
+This is a project for cst 363 (Introduction to Database Systems) at CSUMB. 
 
 How use the program
 System requirements:
