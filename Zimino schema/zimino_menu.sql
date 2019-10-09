@@ -40,7 +40,7 @@ CREATE TABLE `menu` (
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-INSERT INTO `menu` VALUES (1,1,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake'),(2,2,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake'),(3,3,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu'),(4,4,'Sprite','Salad','Ravioli alla Aragosta',NULL),(5,5,'Fanta','Panzerotti','Linguine Di Granchio',NULL),(6,6,'Coffee',NULL,'Spiedini di polpettine',NULL),(7,7,'Wine',NULL,'Vegetariana',NULL),(8,8,NULL,NULL,'Fradiavola',NULL);
+INSERT INTO `menu` VALUES (1,1,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake'),(2,2,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake'),(3,3,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu'),(4,4,'Sprite','Salad','Ravioli alla Aragosta',NULL),(5,5,'Fanta','Panzerotti','Linguine Di Granchio',NULL),(6,6,'Coffee',NULL,'Spiedini di polpettine',NULL),(7,7,'Wine',NULL,'Vegetariana',NULL),(8,8,'Tea',NULL,'Fradiavola',NULL);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-07 18:16:18
+-- Dump completed on 2019-10-08 19:22:23

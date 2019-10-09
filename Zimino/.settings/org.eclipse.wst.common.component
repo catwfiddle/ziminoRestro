@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Zimin">
+    <wb-module deploy-name="Zimino">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="Zimino"/>
-        <property name="java-output-path" value="/Zimin/build/classes"/>
+        <property name="java-output-path" value="/Zimino/build/classes"/>
     </wb-module>
 </project-modules>

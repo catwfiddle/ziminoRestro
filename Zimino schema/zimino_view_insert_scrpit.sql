@@ -1,5 +1,5 @@
 /*The tip the customber enters gets inserted into the ordered table.
-The view is used to hide the tip that is in the ordered table.*/
+The view is used to hide the customer's tip that is in the ordered table.*/
 
 use zimino;
 create view tips_view as 
@@ -18,7 +18,4 @@ VALUES
 (5, 5, 'Fanta', 'Panzerotti', 'Linguine Di Granchio', null),
 (6, 6, 'Coffee', null, 'Spiedini di polpettine', null),
 (7, 7, 'Wine', null, 'Vegetariana', null), 
-(8, 8, null, null, 'Fradiavola', null);
-
-
-
+(8, 8, 'Tea', null, 'Fradiavola', null);
