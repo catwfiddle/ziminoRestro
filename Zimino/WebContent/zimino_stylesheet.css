@@ -66,14 +66,16 @@ text won't be placed next to the picture.*/
 }
 
 /*This centers the main course picture in the welcome.html
-It uses a display block, so the
-text won't be next to the picture.*/
+It uses a display block.*/
+
 .centerpic2 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 35%;
 }
+
+
 
 /*This places the text in the welome.html on the center of the page*/
 .centerText {
@@ -92,10 +94,41 @@ text won't be next to the picture.*/
 .centerText a:hover {
 	color: #000000;
 }
-/*This puts the text in the meun.html in center with a left alignment*/
-.centerLeftText {
-	text-align: text-align;
-	display: flex;
-	justify-content: center;
-	align-items: left;
+/*This puts the content in the center with a left text alignment*/
+.center {
+	text-align: center;
+}
+
+/*This sets the text to the left alignment*/
+.LeftText {
+	text-align: left;
+	/*This sets the text vertically
+    on a new line instead of placing 
+    them in the horizontal spaces 
+    next to each text block. */
+	display: inline-block;
+}
+
+/*This is the footer for the websites. 
+It also centers the text and it adds a thin border line on top 
+of the footer container. */
+#footer {
+	bottom: 0;
+	text-align: center;
+	display: inline-block;
+	border-top-style: solid;
+	border-top-color: #A9A9A9;
+	border-top-width: thin;
+	width: 100%;
+}
+
+/*This changes the text in the a tag in the footer to white text color
+and hides the automatic underline on the hyperlink. */
+#footer a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#footer a: hover {
+	color: #000000;
 }
