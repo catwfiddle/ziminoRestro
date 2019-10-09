@@ -7,7 +7,7 @@ How use the program
 System requirements:
 -Software 
 -Eclipse enterprise version
--Apache Tomcat 8
+-Apache Tomcat 8.5
 -MYSQL workbench 
 -MySQL JDBC driver File
 -Windows 10
