@@ -77,6 +77,10 @@ It uses a display block.*/
 }
 
 
+.centerTable {
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*This places the text in the welome.html on the center of the page*/
 .centerText {
