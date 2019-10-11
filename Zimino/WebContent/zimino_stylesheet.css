@@ -3,12 +3,13 @@
 /*All text colors are white inside the body
 and the background is #65737e */
 body {
-	margin: 0;
-	background: #65737e;
+   margin: 0;
+   background: #65737e;
 	font-family: sans-serif;
 	font-weight: normal;
 	color: #ffffff;
 }
+ 
 
 /*This is the navigation bar that is on the top
 of the page. It is centered. */
@@ -97,8 +98,6 @@ It uses a display block.*/
 /*This puts the content in the center with a left text alignment*/
 .center {
 	text-align: center;
-	padding-left: 75px;
-	padding-right: 75px;
 }
 
 /*This sets the text to the left alignment*/
@@ -110,18 +109,18 @@ It uses a display block.*/
     next to each text block. */
 	display: inline-block;
 }
-
 /*This is the footer for the websites. 
 It also centers the text and it adds a thin border line on top 
 of the footer container. */
 #footer {
 	bottom: 0;
-	text-align: center;
-	display: inline-block;
-	border-top-style: solid;
-	border-top-color: #A9A9A9;
-	border-top-width: thin;
-	width: 100%;
+   text-align: center;
+   display: inline-block;
+   border-top-style: solid;
+   border-top-color: #A9A9A9;
+   border-top-width: thin;
+   width: 100%;
+
 }
 
 /*This changes the text in the a tag in the footer to white text color
