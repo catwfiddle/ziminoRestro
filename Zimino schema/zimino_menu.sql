@@ -29,8 +29,12 @@ CREATE TABLE `menu` (
   `description_appetizers` tinytext,
   `description_main_course` tinytext,
   `description_dessert` tinytext,
+  `ordered_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`menu_id`),
-  KEY `customer_id` (`customer_id`)
+  KEY `customer_id` (`customer_id`),
+  KEY `ordered_id` (`ordered_id`),
+  CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
+  CONSTRAINT `menu_ibfk_2` FOREIGN KEY (`ordered_id`) REFERENCES `ordered` (`ordered_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +44,7 @@ CREATE TABLE `menu` (
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-INSERT INTO `menu` VALUES (1,1,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake'),(2,2,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake'),(3,3,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu'),(4,4,'Sprite','Salad','Ravioli alla Aragosta',NULL),(5,5,'Fanta','Panzerotti','Linguine Di Granchio',NULL),(6,6,'Coffee',NULL,'Spiedini di polpettine',NULL),(7,7,'Wine',NULL,'Vegetariana',NULL),(8,8,'Tea',NULL,'Fradiavola',NULL);
+INSERT INTO `menu` VALUES (1,1,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake',NULL),(2,2,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake',NULL),(3,3,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu',NULL),(4,4,'Sprite','Salad','Ravioli alla Aragosta',NULL,NULL),(5,5,'Fanta','Panzerotti','Linguine Di Granchio',NULL,NULL),(6,6,'Coffee',NULL,'Spiedini di polpettine',NULL,NULL),(7,7,'Wine',NULL,'Vegetariana',NULL,NULL),(8,8,'Tea',NULL,'Fradiavola',NULL,NULL);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-10 17:10:13
+-- Dump completed on 2019-10-10 22:26:41

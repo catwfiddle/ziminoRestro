@@ -27,10 +27,13 @@ CREATE TABLE `customer` (
   `first` tinytext,
   `last` tinytext,
   `menu_id` int(11) DEFAULT NULL,
+  `ordered_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`customer_id`),
   KEY `meun_id_idx` (`menu_id`),
+  KEY `ordered_id` (`ordered_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`ordered_id`) REFERENCES `ordered` (`ordered_id`),
   CONSTRAINT `meun_id` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +42,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES (1,'Domenico ','Dolce',NULL,NULL),(2,' Domenico ','Dolce',NULL,NULL),(3,' Domenico ','Dolce',NULL,NULL),(4,' Domenico ','Dolce',NULL,NULL),(5,'Domenico ','Dolce',NULL,NULL),(6,' Domenico ','Dolce',NULL,NULL),(7,'shell','s',NULL,NULL),(8,'Domenico ','Dolce',NULL,NULL),(9,'Domenico ','Dolce',NULL,NULL),(10,'Domenico ','Dolce',NULL,NULL),(11,'Shell','S',NULL,NULL),(12,'Pavel','D',NULL,NULL),(13,'shell','s',NULL,NULL),(14,'shell','s',NULL,NULL),(15,'shelly','sun',NULL,NULL),(16,'shell','han',NULL,NULL),(17,'shell','s',NULL,NULL),(18,'shell','o',NULL,NULL),(19,'shelly','s',NULL,NULL),(20,'shell','sun',NULL,NULL);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-10 17:10:12
+-- Dump completed on 2019-10-10 22:26:41
