@@ -32,7 +32,6 @@ CREATE TABLE `customer` (
   KEY `menu_id` (`menu_id`),
   KEY `ordered_id` (`ordered_id`),
   CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`),
-  CONSTRAINT `customer_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`),
   CONSTRAINT `customer_ibfk_3` FOREIGN KEY (`ordered_id`) REFERENCES `ordered` (`ordered_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-10 23:46:45
+-- Dump completed on 2019-10-11  0:31:28
