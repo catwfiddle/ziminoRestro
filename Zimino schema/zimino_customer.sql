@@ -26,7 +26,6 @@ CREATE TABLE `customer` (
   `customer_id` int(11) NOT NULL AUTO_INCREMENT,
   `first` tinytext,
   `last` tinytext,
-  `tip` float DEFAULT NULL,
   `menu_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`customer_id`),
   KEY `meun_id_idx` (`menu_id`),
@@ -52,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-08 19:22:23
+-- Dump completed on 2019-10-10 17:10:12
