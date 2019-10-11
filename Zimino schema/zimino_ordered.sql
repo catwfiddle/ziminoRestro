@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `ordered`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ordered` (
-  `ordered_id` int(11) NOT NULL,
+  `ordered_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) DEFAULT NULL,
   `menu_id` int(11) DEFAULT NULL,
   `drink` tinytext,
@@ -33,9 +33,7 @@ CREATE TABLE `ordered` (
   `tip` float DEFAULT NULL,
   PRIMARY KEY (`ordered_id`),
   KEY `customer_id` (`customer_id`),
-  KEY `menu_id` (`menu_id`),
-  CONSTRAINT `ordered_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
-  CONSTRAINT `ordered_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`)
+  KEY `menu_id` (`menu_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-11  1:29:55
+-- Dump completed on 2019-10-11  1:40:49
