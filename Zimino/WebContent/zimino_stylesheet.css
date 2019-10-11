@@ -97,6 +97,8 @@ It uses a display block.*/
 /*This puts the content in the center with a left text alignment*/
 .center {
 	text-align: center;
+	padding-left: 75px;
+	padding-right: 75px;
 }
 
 /*This sets the text to the left alignment*/
