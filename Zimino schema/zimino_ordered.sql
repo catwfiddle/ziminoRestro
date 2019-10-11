@@ -33,8 +33,10 @@ CREATE TABLE `ordered` (
   `tip` float DEFAULT NULL,
   PRIMARY KEY (`ordered_id`),
   KEY `customer_id` (`customer_id`),
-  KEY `menu_id` (`menu_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `menu_id` (`menu_id`),
+  CONSTRAINT `ordered_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
+  CONSTRAINT `ordered_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +45,7 @@ CREATE TABLE `ordered` (
 
 LOCK TABLES `ordered` WRITE;
 /*!40000 ALTER TABLE `ordered` DISABLE KEYS */;
+INSERT INTO `ordered` VALUES (1,NULL,NULL,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake',9);
 /*!40000 ALTER TABLE `ordered` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-11  1:40:49
+-- Dump completed on 2019-10-11  1:49:41
