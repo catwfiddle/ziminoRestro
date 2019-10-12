@@ -105,7 +105,7 @@ can input their first name.The limited input for chars is 20.--%>
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
-     <tr>
+    
      <tr>
      <td> Appetizers </td>  <td align = "left" >
        <select name = "appetizers" id = "appetizers" style = "width:177px" >
@@ -130,7 +130,7 @@ can input their first name.The limited input for chars is 20.--%>
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
-     <tr>
+     
      <tr>
      <td> Main Course </td>  <td align = "left" >
        <select name = "main_course" id = "main_course" style = "width:177px" >
@@ -155,7 +155,7 @@ can input their first name.The limited input for chars is 20.--%>
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
-     <tr>
+     
      <tr>
      <td> Dessert </td>  <td align = "left" >
        <select name = "dessert" id = "dessert" style = "width:177px;" >

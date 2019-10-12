@@ -52,29 +52,48 @@
    <%--This does not give the table an border outline.--%>
    <table border = "0">
     <tr>
-     <tr>
-     
-   <td> First Name </td>
-   <td align = "left" >  <input type = "first" size = "26"  name = "first"  placeholder = "Name used for placed order"maxlength = "20" >  </td>
+     <tr>    
+    <tr>
+ <td> First name </td>
+ <td align = "left">  <input type = "text" name = "first" size = "21"
+  maxlength = "20">  </td>
    </tr>
-   <td> Last name </td>
-   <td align = "left" >  <input type = "last" size = "26"   name = "last"  placeholder = "Name used for placed order" maxlength = "20" >  </td>
+   <%--This is the last name row of the table, where the user
+can input their first name.The limited input for chars is 20.--%>
+ <tr>
+ <td> Last name </td>
+ <td align = "left" >  <input type = "text" name = "last" size = "21"
+  maxlength = "20" >  </td>
    </tr>
-   <td> Ordered Drink </td>
-   <td align = "left" >  <input type = "drink" size = "26"  name = "drink" placeholder = "Placed drink order" maxlength = "30" >  </td>
+    <tr>
+ <td> Ordered drink</td>
+ <td align = "left">  <input type = "text" name = "drink" size = "21"
+  >  </td>
    </tr>
-   <td> Ordered appetizer </td>
-   <td align = "left" >  <input type = "appetizers" size = "26" name = "appetizers" placeholder = "Placed appetizer" maxlength = "30" >  </td>
+   <%--This is the last name row of the table, where the user
+can input their first name.The limited input for chars is 20.--%>
+ <tr>
+ <td> Ordered appetizer </td>
+ <td align = "left" >  <input type = "text" name = "appetizers" size = "21"
+   >  </td>
    </tr>
-   <td> Ordered main course </td>
-   <td align = "left" >  <input type = "main_course" size = "26" name = "main_course" placeholder = "Placed main course" maxlength = "30" >  </td>
+    <tr>
+ <td> Ordered Main course</td>
+ <td align = "left">  <input type = "text" name = "main_course" size = "21"
+  maxlength = "20">  </td>
    </tr>
-   <td> Dessert </td>
-   <td align = "left" >  <input type = "dessert" size = "26" name = "dessert"  placeholder = "Placed dessert" maxlength = "30" >  </td>
+   <%--This is the last name row of the table, where the user
+can input their first name.The limited input for chars is 20.--%>
+ <tr>
+ <td> Ordered Dessert </td>
+ <td align = "left" >  <input type = "text" name = "dessert" size = "21" >  </td>
    </tr>
-   <td> Tipped </td>
-   <td align = "left" >  <input type = "tip" size = "26" name = "tipped" placeholder = "Amount tipped" maxlength = "10" >  </td>
+    <tr>
+ <td>Tipped </td>
+ <td align = "left">  <input type = "text" name = "tipped" size = "21"
+  maxlength = "20">  </td>
    </tr>
+
    
 
 
