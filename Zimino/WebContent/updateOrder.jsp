@@ -202,7 +202,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
      %>
      <tr>
      <tr>
-     <td> Update Appetizer </td>  <td align = "left" >
+     <td> Appetizer </td>  <td align = "left" >
        <select name = "New_appetizers" id = "New_appetizers" style = "width:185px" >
        <% while (rs.next()) {
          %>
