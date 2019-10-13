@@ -1,13 +1,13 @@
 /*The tip the customber enters gets inserted into the ordered table.
 The view is used to hide the customer's tip that is in the ordered table.*/
-
 use zimino;
 create view tips_view as 
 select tip 
 from ordered; 
 
+/*This populates the menu table.*/
 use zimino; 
-insert into menu
+insert into menu 
 (menu_id, description_drink, 
 description_appetizers, description_main_course, description_dessert)
 VALUES  
