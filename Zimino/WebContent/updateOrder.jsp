@@ -130,7 +130,7 @@ can input their first name.The limited input for chars is 20.--%>
     <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from customer where last IS NOT NULL");
      %>

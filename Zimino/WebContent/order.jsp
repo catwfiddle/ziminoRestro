@@ -70,7 +70,7 @@ can input their first name.The limited input for chars is 20.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -101,7 +101,7 @@ can input their first name.The limited input for chars is 20.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -126,7 +126,7 @@ can input their first name.The limited input for chars is 20.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -151,7 +151,7 @@ can input their first name.The limited input for chars is 20.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
