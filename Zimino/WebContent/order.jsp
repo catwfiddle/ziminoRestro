@@ -21,12 +21,12 @@
 <ul>
  <li><a href= "http://localhost:8080/Zimino/welcome.html">Welcome</a></li>
   <li><a href= "http://localhost:8080/Zimino/menu.html" >Menu</a></li>
-   <!--The Reservations does not have a web page. It just links to oepntable.com-->
+   <!--The Reservations does not have a web page. It just links to opentable.com-->
       <li><a href = "https://www.opentable.com" > Reservations  </a></li>
   <li><a href="http://localhost:8080/Zimino/order.jsp">Order</a></li>
   <li><a href="http://localhost:8080/Zimino/updateOrder.jsp">Change Order</a></li>
-  <li><a href="">Cancel order</a></li>
-  <li><a href="">View all orders</a></li>
+  <li><a href="http://localhost:8080/Zimino/cancel.html">Cancel order</a></li>
+  <li><a href="http://localhost:8080/Zimino/viewAllOrders.html">View all orders</a></li>
   <li><a href="http://localhost:8080/Zimino/Connect.html">Connect</a></li>
 </ul>
 </nav>
@@ -48,16 +48,14 @@
    <%--This does not give the table an border outline.--%>
    <table border = "0">
 
-   <%--This is the first name row of the table, where the user
-can input their first name.The limited input for chars is 20.--%>
+   <%--This is the first name row of the table, that uses a text 
+ input box for user's first name.The limited input for chars is 20.--%>
 
  <tr>
  <td> First name </td>
  <td align = "left">  <input type = "text" name = "first" size = "20"
   maxlength = "20">  </td>
    </tr>
-   <%--This is the last name row of the table, where the user
-can input their first name.The limited input for chars is 20.--%>
  <tr>
  <td> Last name </td>
  <td align = "left" >  <input type = "text" name = "last" size = "20"
@@ -65,8 +63,8 @@ can input their first name.The limited input for chars is 20.--%>
    </tr>
 
    <%--This opens the data base and implements the sql statement.
-  The sql select statement selects all data from the menu table
-  where the value in the description_drink is not a null value.--%>
+  The sql select statement gets all the not null data in from the menu table 
+ from the description_drink  column.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -75,10 +73,8 @@ can input their first name.The limited input for chars is 20.--%>
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
      <tr>
-     <tr>  <%--This is the row for the Drink in the table.It displays
-    all the retrieved data from the description_drink column in the menu table
-    in a drop down list.This id correspondences to the desc_drink that is
-    initialized in the Order.java.--%>
+     <tr>  <%--This displays all the retrieved data from the description_drink column in the menu table
+    in a drop down list.--%>
      <td> Drink </td>  <td align = "left" >
        <select name = "drink" id = "drink" style = "width:177px" >
        <% while (rs.next()) {
@@ -189,7 +185,8 @@ can input their first name.The limited input for chars is 20.--%>
    </div>
    </div>
    <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
-   <%--This is the footer.--%>
+   <%--This is the footer which includes a link for the photograph on some of the webpages for this
+   factitious Zimino Restaurant database website.--%>
    <div id = "footer" >
    <p>
   Copyright © 2019 Zimino.All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.

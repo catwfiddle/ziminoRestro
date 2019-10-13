@@ -1,4 +1,4 @@
-package ziminoServlets;
+package zimino;
 
 
 import java.io.IOException;
@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class updated Order
+ * Servlet implementation class Order
  */
-@WebServlet("/updatedOrder")
-public class updatedOrder extends HttpServlet {
+@WebServlet("/Order")
+public class Order extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	// database URL
@@ -34,68 +34,51 @@ public class updatedOrder extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-
 		// Sql statements
-String sql ="select  c.customer_id, o.ordered_id, c.first, c.last, o.drink, o.appetizers, o.main_course, o.dessert, o.tip\r\n" + 
+//This selects the the customer's first and last name from the customer's table and it also
+//drink, appetizers, main_course, dessert and tip from the ordered table. This is used to
+//display the customer's order after the customer's inputs his/her information and selects the order.
+String sql = "select  c.customer_id, c.first, c.last, o.drink, o.appetizers, o.main_course, o.dessert, o.tip\r\n" + 
 "FROM customer c inner JOIN ordered o on c.customer_id = o.ordered_id";
-String usql =(" UPDATE ordered set drink=?, appetizers=?, main_course=?, dessert=?, tip =? \r\n" + 
-" where drink=? and appetizers=? and main_course= ? and dessert=? and tip =? ");
-
-String upsql ="UPDATE customer set first =?, last =? where first =? and last =?";
-
-		//Sets the response on the content type
+//This inserts the customer's orders into the ordered table. The data for the food items are retrieved from the 
+//menu table and the tip is retrieved from the customer's input.
+	String isql = "INSERT ordered (drink, appetizers, main_course, dessert, tip) values (?, ?, ?, ?, ?) ";
+//This inserts the customer's first and last name into the customer's table. 
+String insql = "INSERT into customer (first, last) values (?,?)";		
+		
+		//Sets the response on the the content type
 		response.setContentType("text/html"); 
 		PrintWriter out = response.getWriter();
-
+//Opens up data base
 		try ( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
-		
 
-			PreparedStatement pstmt =  conn.prepareStatement(sql);
-ResultSet rs = pstmt.executeQuery(sql); 
-
-
-//gets the input date from the form on the order.html
-			// Get data from form and convert to int for the tip the user enters.
-
-int New_tip= Integer.parseInt(request.getParameter("New_tip"));
-		String New_first_name = request.getParameter("New_first_name");
-		String New_last_name = request.getParameter("New_last_name");
-		String New_drink = request.getParameter("New_drink");
-		String New_appetizers = request.getParameter("New_appetizers");
-		String New_main_course = request.getParameter("New_main_course");
-		String New_dessert = request.getParameter("New_dessert");
-String first = request.getParameter("first");
+		//gets the input date from the form on the order.jsp
+		String first = request.getParameter("first");
 		String last = request.getParameter("last");
 		String drink = request.getParameter("drink");
 		String appetizers = request.getParameter("appetizers");
 		String main_course = request.getParameter("main_course");
 		String dessert = request.getParameter("dessert");
-			int tipped = Integer.parseInt (request.getParameter("tipped"));
 
-			pstmt =  conn.prepareStatement(usql);
-pstmt.setString (1, New_drink);
-			pstmt.setString(2, New_appetizers);
-			pstmt.setString(3, New_main_course);
-			pstmt.setString(4, New_dessert);
-pstmt.setInt(5, New_tip);
-pstmt.setString (6, drink);
-			pstmt.setString(7, appetizers);
-			pstmt.setString(8, main_course);
-			pstmt.setString(9, dessert);
-pstmt.setInt(10, tipped);
 
+			// Get data from form and convert to double for the tip the user enters.
+			double tipInput = Double.parseDouble (request.getParameter("tip"));
+
+
+//These prepared statements are used for executing the sql query.
+			PreparedStatement pstmt =  conn.prepareStatement(isql);
+pstmt.setString (1, drink);
+			pstmt.setString(2, appetizers);
+			pstmt.setString(3, main_course);
+			pstmt.setString(4, dessert);
+pstmt.setDouble(5, tipInput);
 pstmt.executeUpdate();
 
-
-pstmt =  conn.prepareStatement(upsql);
-pstmt.setString(1, New_first_name);
-			pstmt.setString(2, New_last_name);
-pstmt.setString(3, first);
-			pstmt.setString(4, last);
-
+pstmt =  conn.prepareStatement(insql);
+pstmt.setString(1, first);
+			pstmt.setString(2, last);
 pstmt.executeUpdate();
-
-
+ResultSet rs = pstmt.executeQuery(sql); 
 
 
 out.println("<!DOCTYPE HTML><html><body>");
@@ -112,6 +95,8 @@ out.println("<title>Menu</title>\r\n" +
 "  <li><a href= \"http://localhost:8080/Zimino/meun.html\" >Menu</a></li>\r\n" + 
 "  <li><a href=\"http://localhost:8080/Zimino/order.jsp\">Order</a></li>\r\n" + 
 " <li><a href=\"http://localhost:8080/Zimino/updateOrder.jsp\">Change Order</a></li>"+
+"<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>"+
+"<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>"+
 "<!--The Reservations does not have a web page. It just links to oepntable.com-->\r\n" + 
 "      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
 "  <li><a href=\"\">Cancel order</a></li>\r\n" + 
@@ -128,11 +113,13 @@ out.println("<title>Menu</title>\r\n" +
 "<br/><br/>"+ 
 "<div class = \"center\">\r\n" + 
 "<div class = \"LeftText\">"+
-"<h1 style = \"font-size:100%;\" > Your order has been updated. Thank you! </h1>\r\n" + 
+"<h1 style = \"font-size:100%;\" > Your order has been placed. Thank you! </h1>\r\n" + 
 "<table border=1>\r\n" + 
 "<tr>\r\n" + 
 "<td>First Name</td><td>Last Name</td><td>Drink</td><td>Appetizer</td><td>Main course</td><td>Dessert</td>\r\n" + 
 "</tr>");
+//This table displays all the customer's name and all the customer's order.
+
 while (rs.next()) {
 out.println("<tr>");
 out.println("<td>" + rs.getString("c.first") + "</td>");

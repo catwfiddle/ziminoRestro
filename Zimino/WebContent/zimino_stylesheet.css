@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
-/*All text colors are white inside the body
-and the background is #65737e */
+/*The text colors are white inside the body
+and the background is a gray color. */
 body {
    margin: 0;
    background: #65737e;
@@ -75,9 +75,6 @@ It uses a display block.*/
 	margin-right: auto;
 	width: 35%;
 }
-
-
-
 /*This places the text in the welome.html on the center of the page*/
 .centerText {
 	text-align: center;
