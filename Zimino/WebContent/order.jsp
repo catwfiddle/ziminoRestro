@@ -19,7 +19,7 @@
  <div class="topnav">
 <nav>
 <ul>
- <li><a href= "http://localhost:8080/Zimino/welcome.html">Welcome</a></li>
+  <li><a href= "http://localhost:8080/Zimino/welcome.html">Welcome</a></li>
   <li><a href= "http://localhost:8080/Zimino/menu.html" >Menu</a></li>
    <!--The Reservations does not have a web page. It just links to opentable.com-->
       <li><a href = "https://www.opentable.com" > Reservations  </a></li>

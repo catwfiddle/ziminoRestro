@@ -59,9 +59,11 @@ public class Ordered extends HttpServlet {
 			out.println("<ul>");
 			out.println("<li><a href='http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
+out.println("<li><a href ='https://www.opentable.com'> Reservations </a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/order.html'>Order</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>");
+			out.println("<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>");
 			out.println("</ul>");
 			out.println("</nav>");
 			out.println("</div>");
@@ -142,9 +144,12 @@ public class Ordered extends HttpServlet {
 			out.println("<ul>");
 			out.println("<li><a href='http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
+out.println("<li><a href ='https://www.opentable.com'> Reservations </a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/order.html'>Order</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
 			out.println("<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>");
+
 			out.println("</ul>");
 			out.println("</nav>");
 			out.println("</div>");

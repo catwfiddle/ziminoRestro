@@ -36,8 +36,18 @@ CREATE TABLE `ordered` (
   KEY `menu_id` (`menu_id`),
   CONSTRAINT `ordered_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
   CONSTRAINT `ordered_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ordered`
+--
+
+LOCK TABLES `ordered` WRITE;
+/*!40000 ALTER TABLE `ordered` DISABLE KEYS */;
+INSERT INTO `ordered` VALUES (51,NULL,NULL,'Italian soda','Calamari Fritti','Fradiavola','Cheesecake',25),(52,NULL,NULL,'Italian soda','Bruschetta','Linguine con Gamberetti','Chocolate cake',30),(53,NULL,NULL,'Italian soda','Carpaccio di salmone','Linguine Di Granchio','Chocolate cake',20),(54,NULL,NULL,'Sprite','Calamari Fritti','Linguine con Gamberetti','Cheesecake',23),(55,NULL,NULL,'Diet Coke','Bruschetta','Ravioli alla Aragosta','Tiramisu',20),(56,NULL,NULL,'Coffee','Salad','Linguine con Gamberetti','Tiramisu',30),(57,NULL,NULL,'Sprite','Bruschetta','Fradiavola','Cheesecake',23),(58,NULL,NULL,'Italian soda','Panzerotti','Linguine con Gamberetti','Cheesecake',18),(59,NULL,NULL,'Italian soda','Bruschetta','Spiedini di polpettine','Tiramisu',28),(60,NULL,NULL,'Tea','Bruschetta','Linguine con Gamberetti','Tiramisu',30);
+/*!40000 ALTER TABLE `ordered` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -48,4 +58,4 @@ CREATE TABLE `ordered` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-13 14:10:21
+-- Dump completed on 2019-10-13 18:28:36

@@ -93,12 +93,12 @@ out.println("<title>Menu</title>\r\n" +
 "<ul>\r\n" + 
 "  <li><a href= \"http://localhost:8080/Zimino/welcome.html\">Welcome</a></li>\r\n" + 
 "  <li><a href= \"http://localhost:8080/Zimino/meun.html\" >Menu</a></li>\r\n" + 
+"<!--The Reservations does not have a web page. It just links to oepntable.com-->\r\n" + 
+"      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
 "  <li><a href=\"http://localhost:8080/Zimino/order.jsp\">Order</a></li>\r\n" + 
 " <li><a href=\"http://localhost:8080/Zimino/updateOrder.jsp\">Change Order</a></li>"+
 "<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>"+
-"<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>"+
-"<!--The Reservations does not have a web page. It just links to oepntable.com-->\r\n" + 
-"      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
+"<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>"+
 "  <li><a href=\"\">Cancel order</a></li>\r\n" + 
 "  <li><a href=\"\">View all orders</a></li>\r\n" + 
 "  <li><a href=\"http://localhost:8080/Zimino/Connect.html\">Connect</a></li>\r\n" + 
