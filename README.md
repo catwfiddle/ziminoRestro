@@ -9,7 +9,7 @@ System requirements:<br/>
 -MySQL Workbench 8.0<br/>
 -MySQL JDBC driver <br/>
 -Windows 10<br/>
--Java JRE Server 8<br/>
+-Java JRE Server 8<br/><br/>
 Running this project: <br/>
 -In MySQL workbench from the Zimino schema folder: <br/>
 -Run create_zimino_schema.sql to initialize the zimino schema. <br/>
