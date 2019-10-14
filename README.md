@@ -1,7 +1,7 @@
 # cst_363_project
 Shelly Sun, Andrew Bell, Jasper Kolp<br/>
 Project: part 2<br/>
-This is a factitious Zimino Italian Restaurant Database project for cst 363 (Introduction to Database Systems) at CSUMB. <br/>
+This is a factitious Zimino Italian Restaurant Database project for cst 363 (Introduction to Database Systems) at CSUMB. <br/>updated Readme.md with <br/> tags
 How use the program:<br/>
 System requirements:<br/>
 -Eclipse enterprise version<br/>
