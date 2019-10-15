@@ -19,11 +19,8 @@ public class Ordered extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
-<<<<<<< HEAD
-	static final String PASS = "Rkdwldns1994"; //put in your own database password
-=======
+
 	static final String PASS = "password"; //put in your own database password
->>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -154,7 +151,7 @@ out.println("<!--The Reservations does not have a web page. It just links to ope
 out.println("<li><a href = 'https://www.opentable.com' > Reservations  </a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/order.jsp'>Order</a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/cancel.jsp'>Cancel order</a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a></li>");
 			out.println("</ul>");

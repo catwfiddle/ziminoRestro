@@ -120,7 +120,7 @@ out.println("<title>Menu</title>\r\n" +
 "      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
 "  <li><a href=\"http://localhost:8080/Zimino/order.jsp\">Order</a></li>\r\n" + 
 " <li><a href=\"http://localhost:8080/Zimino/updateOrder.jsp\">Change Order</a></li>"+
-"<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>"+
+"<li><a href='http://localhost:8080/Zimino/cancel.jsp'>Cancel order</a></li>"+
 "<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>"+
 "  <li><a href=\"http://localhost:8080/Zimino/Connect.html\">Connect</a></li>\r\n" + 
 "</ul>\r\n" + 
@@ -161,7 +161,7 @@ out.println("</div></div>\r\n" +
 "<br/>\r\n" + 
 "\r\n" + 
 "<div id=\"footer\">\r\n" + 
-"<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
+"<p> Copyright ï¿½ 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
 " <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\">\r\n" + 
 " Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>\r\n" + 
 "  </div>");

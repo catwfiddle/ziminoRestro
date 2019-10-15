@@ -1,9 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import = "java.sql.*" %>
+    <%@ page import="zimino.Cancel" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-
-<title>Welcome</title>
+<title>Cancel order</title>
 <link rel="stylesheet" href="zimino_stylesheet.css"> 
 </head>
 <body>
@@ -27,34 +31,36 @@
 </header>
 <br/>
 <img src="logo.gif" class="centerpic">
-<br/>
-<img src="food.jpg" class="centerpic2">
-<br/>
 
-<div class = "centerText">
+<div class = "center">
+<div class = "LeftText">
+<h2>Cancel Order</h2>
 
-
-&nbsp;&nbsp;Zimino is an authentic Italian restaurant. We have been in business since<br/>
-1990. We are more than your typical dine-in and we also cater. We have  <br/>
-&nbsp;locations in New York City and San Francisco. We support local growers. <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We use organic products from local growers and sustainable meat and fish. 
- <br/> 
-  <br/> 
-Fellow us on <a href="https://twitter.com/">Twitter</a> and 
-<a href="https://www.instagram.com">Instagram</a> |
- Like us on <a href="https://www.yelp.com">Yelp</a> and 
-  <a href="https://www.facebook.com">Facebook</a> 
-<br/><br/><br/><br/>
-
+<form action="Select_cancel" method = "POST">
+<table>
+	<tr>
+	<td>First Name : </td>
+	<td> <input type = "text" name = "first" size = "20" maxlength = "20"> </td>
+	</tr>
+	<tr>
+		<td>Last Name : </td>
+	<td><input type = "text" name = "last" size = "20" maxlength = "20"> </td>
+	</tr>
+	<tr>
+   <td colspan = "2" align = "right" >  <input type = "submit"  value = "Submit" >  </td>
+   </tr>
+</table>
+</form>
 
 </div>
-
+</div>
 
 <div id="footer">
-<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
+<p> Copyright Â© 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
  <a href = "https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/">
- Photography credit: Antiche Sere Osteria Enoteca, Bevagna</a> <br/><br/>
+ Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>
   </div>
+<body>
 
 </body>
 </html>

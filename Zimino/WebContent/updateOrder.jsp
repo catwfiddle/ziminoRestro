@@ -27,7 +27,7 @@
       <li><a href = "https://www.opentable.com" > Reservations  </a></li>
   <li><a href="http://localhost:8080/Zimino/order.jsp">Order</a></li>
   <li><a href="http://localhost:8080/Zimino/updateOrder.jsp">Change Order</a></li>
-  <li><a href="http://localhost:8080/Zimino/cancel.html">Cancel order</a></li>
+  <li><a href="http://localhost:8080/Zimino/cancel.jsp">Cancel order</a></li>
   <li><a href="http://localhost:8080/Zimino/ordered">View all orders</a></li>
   <li><a href="http://localhost:8080/Zimino/Connect.html">Connect</a></li>
 </ul>

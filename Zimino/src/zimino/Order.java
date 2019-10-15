@@ -27,13 +27,8 @@ public class Order extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
-<<<<<<< HEAD
-	static final String PASS = "Rkdwldns1994";
-=======
-	static final String PASS = "password";
->>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
-	
 
+	static final String PASS = "password";
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -101,7 +96,7 @@ out.println("<title>Menu</title>\r\n" +
 "      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
 "  <li><a href=\"http://localhost:8080/Zimino/order.jsp\">Order</a></li>\r\n" + 
 " <li><a href=\"http://localhost:8080/Zimino/updateOrder.jsp\">Change Order</a></li>"+
-"<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>"+
+"<li><a href='http://localhost:8080/Zimino/cancel.jsp'>Cancel order</a></li>"+
 "<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>"+
 "  <li><a href=\"\">Cancel order</a></li>\r\n" + 
 "  <li><a href=\"\">View all orders</a></li>\r\n" + 
