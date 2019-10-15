@@ -68,7 +68,7 @@
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -101,7 +101,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -131,7 +131,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -158,7 +158,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
