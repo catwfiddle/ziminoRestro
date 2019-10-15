@@ -27,7 +27,11 @@ public class Order extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
+<<<<<<< HEAD
 	static final String PASS = "Rkdwldns1994";
+=======
+	static final String PASS = "password";
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
 	
 
 	

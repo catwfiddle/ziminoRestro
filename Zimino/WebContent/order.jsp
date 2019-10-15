@@ -69,7 +69,11 @@
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -102,7 +106,11 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -132,7 +140,11 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -159,7 +171,11 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>

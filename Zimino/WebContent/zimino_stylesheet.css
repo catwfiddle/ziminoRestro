@@ -57,6 +57,11 @@ nav a:hover {
 	Color: FFF8DC;
 }
 
+.centerTable {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*This centers the logo. It uses a display block, so the
 text won't be placed next to the picture.*/
 .centerpic {

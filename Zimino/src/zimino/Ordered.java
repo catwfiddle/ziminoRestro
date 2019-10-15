@@ -19,7 +19,11 @@ public class Ordered extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
+<<<<<<< HEAD
 	static final String PASS = "Rkdwldns1994"; //put in your own database password
+=======
+	static final String PASS = "password"; //put in your own database password
+>>>>>>> 7de917981c1752e28ae4928d753a89daab9dcc0b
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -34,7 +38,7 @@ public class Ordered extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// get input data from form
-		String name = request.getParameter("name");
+		//String name = request.getParameter("name");
 
 		try ( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)   ) {
 			// prepare select
@@ -57,13 +61,15 @@ public class Ordered extends HttpServlet {
 			out.println("<div class='topnav'>");
 			out.println("<nav>");
 			out.println("<ul>");
-			out.println("<li><a href='http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
-out.println("<li><a href ='https://www.opentable.com'> Reservations </a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/order.html'>Order</a></li>");
+out.println("<li><a href= 'http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
+out.println("<li><a href= 'http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
+out.println("<!--The Reservations does not have a web page. It just links to opentable.com-->");
+out.println("<li><a href = 'https://www.opentable.com' > Reservations  </a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/order.jsp'>Order</a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a></li>");
 			out.println("</ul>");
 			out.println("</nav>");
 			out.println("</div>");
@@ -74,7 +80,7 @@ out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change O
 			
 			// begin table and  column headings
 			out.println("<div>");
-			out.println("<table class='centerTable'>");
+			out.println("<table border=1 class='centerTable'>");
 			out.println("<tr>");
 			out.println("<th>Order Id</th><th>Name</th>");
 			out.println("<th>drink</th><th>appetizer</th>");
@@ -113,14 +119,14 @@ out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change O
 		// SQL statements
 		String sql = "select o.ordered_id, concat(c.first, \" \", c.last) as name, o.drink, o.appetizers, o.main_course, o.dessert, o.tip from ordered o\r\n" + 
 				"join customer c\r\n" + 
-				"where o.customer_id = c.customer_id;";
+				"where o.ordered_id = c.customer_id;";
 
 		// Set response content type
 		response.setContentType("text/html"); 
 		PrintWriter out = response.getWriter();
 		
 		// get input data from form
-		String name = request.getParameter("name");
+		//String name = request.getParameter("name");
 
 		try ( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)   ) {
 			// prepare select
@@ -142,14 +148,15 @@ out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change O
 			out.println("<div class='topnav'>");
 			out.println("<nav>");
 			out.println("<ul>");
-			out.println("<li><a href='http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
-out.println("<li><a href ='https://www.opentable.com'> Reservations </a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/order.html'>Order</a></li>");
+out.println("<li><a href= 'http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
+out.println("<li><a href= 'http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
+out.println("<!--The Reservations does not have a web page. It just links to opentable.com-->");
+out.println("<li><a href = 'https://www.opentable.com' > Reservations  </a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/order.jsp'>Order</a></li>");
 out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
-			out.println("<li><a href='http://localhost:8080/Zimino/viewAllOrders.html'>View all orders</a></li>");
-
+out.println("<li><a href='http://localhost:8080/Zimino/cancel.html'>Cancel order</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>");
+out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a></li>");
 			out.println("</ul>");
 			out.println("</nav>");
 			out.println("</div>");
@@ -159,7 +166,7 @@ out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change O
 			
 			// begin table and  column headings
 			out.println("<div>");
-			out.println("<table class='centerTable'>");
+			out.println("<table border=1 class='centerTable'>");
 			out.println("<tr>");
 			out.println("<th>Order Id</th><th>Name</th>");
 			out.println("<th>drink</th><th>appetizer</th>");
@@ -172,11 +179,11 @@ out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change O
 				out.println("<tr>");
 				out.println("<td>" + rs.getString("ordered_id") + "</td>");
 				out.println("<td>" + rs.getString("name") + "</td>");
-				out.println("<td>" + rs.getInt("drink") + "</td>");
-				out.println("<td>" + rs.getInt("appetizers") + "</td>");
-				out.println("<td>" + rs.getInt("main_course") + "</td>");
-				out.println("<td>" + rs.getInt("dessert") + "</td>");
-				out.println("<td>" + rs.getInt("tip") + "</td>");
+				out.println("<td>" + rs.getString("drink") + "</td>");
+				out.println("<td>" + rs.getString("appetizers") + "</td>");
+				out.println("<td>" + rs.getString("main_course") + "</td>");
+				out.println("<td>" + rs.getString("dessert") + "</td>");
+				out.println("<td>" + rs.getString("tip") + "</td>");
 				out.println("</tr>");
 			}
 			rs.close();

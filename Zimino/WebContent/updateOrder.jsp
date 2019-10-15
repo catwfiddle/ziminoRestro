@@ -100,7 +100,7 @@ all the customer's first name in a drop down menu. Then closes the database. .--
   <% 
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     
     ResultSet rs = s.executeQuery("select * from customer where first IS NOT NULL");
@@ -131,7 +131,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
     <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "magicd3amon");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from customer where last IS NOT NULL");
      %>
@@ -162,7 +162,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -196,7 +196,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -224,7 +224,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -252,7 +252,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "password");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
