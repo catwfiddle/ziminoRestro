@@ -23,11 +23,11 @@ public class Order extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	// database URL
-	static final String DB_URL = "jdbc:mysql://localhost/zimino";
+	static final String DB_URL = "jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
 	// Database credentials
 	static final String USER = "root";
-	static final String PASS = "Rainy22**";
+	static final String PASS = "Rkdwldns1994";
 	
 
 	
@@ -138,7 +138,7 @@ out.println("</div></div>\r\n" +
 "<br/>\r\n" + 
 "\r\n" + 
 "<div id=\"footer\">\r\n" + 
-"<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
+"<p> Copyright ï¿½ 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
 " <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\">\r\n" + 
 " Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>\r\n" + 
 "  </div>");

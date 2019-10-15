@@ -43,6 +43,7 @@
    <div class = "LeftText">
 
    <h1 style = "font-size:138%;" > Place Order </h1>
+   
    <%--This is the place order table.The post form uses Order.java.--%>
    <form action = "Order" method = "POST" >
    <%--This does not give the table a border outline.--%>
@@ -68,7 +69,7 @@
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -101,7 +102,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -131,7 +132,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -158,7 +159,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
@@ -178,6 +179,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
      <%
   } catch (Exception e) {
     out.println(e);
+    System.out.println("failed to connect to the DB");
   }
    %>
 

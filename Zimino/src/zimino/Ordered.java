@@ -15,11 +15,11 @@ public class Ordered extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	// database URL
-	static final String DB_URL = "jdbc:mysql://localhost/zimino";
+	static final String DB_URL = "jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
 	// Database credentials
 	static final String USER = "root";
-	static final String PASS = "Rainy22**"; //put in your own database password
+	static final String PASS = "Rkdwldns1994"; //put in your own database password
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
