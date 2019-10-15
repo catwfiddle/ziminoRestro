@@ -46,7 +46,7 @@ String sql = "select  c.customer_id, c.first, c.last, o.drink, o.appetizers, o.m
 //This inserts the customer's first and last name into the customer's table. 
 String insql = "INSERT into customer (first, last) values (?,?)";		
 		
-		//Sets the response on the the content type
+		//Sets the response on the the content to html
 		response.setContentType("text/html"); 
 		PrintWriter out = response.getWriter();
 //Opens up data base

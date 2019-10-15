@@ -1,7 +1,7 @@
  <%@page language = "java" contentType = "text/html; charset=ISO-8859-1"
   pageEncoding = "ISO-8859-1" %>
    <%@ page import = "java.sql.*" %>
-   <% ResultSet resultset = null;%>
+ 
    
  <!DOCTYPE html>
  <html>
@@ -43,9 +43,9 @@
    <div class = "LeftText">
 
    <h1 style = "font-size:138%;" > Place Order </h1>
-   <%--This is the place order table.The post uses Order.java.--%>
+   <%--This is the place order table.The post form uses Order.java.--%>
    <form action = "Order" method = "POST" >
-   <%--This does not give the table an border outline.--%>
+   <%--This does not give the table a border outline.--%>
    <table border = "0">
 
    <%--This is the first name row of the table, that uses a text 
@@ -64,7 +64,7 @@
 
    <%--This opens the data base and implements the sql statement.
   The sql select statement gets all the not null data in from the menu table 
- from the description_drink  column.--%>
+ from the description_drink column.--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -94,6 +94,10 @@
   }
    %>
 
+<%--This opens the data base and executes the sql statement that selects 
+all the not null data in from the menu table from the  description_appetizers column. After the
+data is retrieved, then it is displayed in a drop down menu. Then the databse is closed.--%>
+   
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -119,6 +123,11 @@
     out.println(e);
   }
    %>
+   
+   <%--The sql statement is that it selects all
+    the not null data in from the menu table from the description_main_course column. .--%>
+
+
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -144,6 +153,8 @@
     out.println(e);
   }
    %>
+    <%--This selects all
+    the not null data in from the menu table from the  description_dessert column. .--%>
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();

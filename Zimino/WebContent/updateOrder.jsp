@@ -1,7 +1,9 @@
  <%@page language = "java" contentType = "text/html; charset=ISO-8859-1"
   pageEncoding = "ISO-8859-1" %>
+  
+  <%--This imports java.sql --%>
    <%@ page import = "java.sql.*" %>
-   <% ResultSet resultset = null;%>
+   
    
  <!DOCTYPE html>
  <html>
@@ -34,11 +36,10 @@
    </header>
    <br/>
 
-   <%--This is places the logo at the center of the page.--%>
+   <%--The logo is centered on this webpage.--%>
    <img src = "logo.gif" class = "centerpic">
 
-   <%--This sets all content in center and LeftText div tags in
-  the center of the website.--%>
+   <%--This sets all content in center of the website.--%>
    <div class = "center">
    <div class = "LeftText">
 
@@ -49,7 +50,7 @@
  
    
   
-   <%--This does not give the table an border outline.--%>
+   <%--This does not give the table a border outline.--%>
    <table border = "0">
     <tr>
      <tr>    
@@ -79,8 +80,7 @@
  <td align = "left">  <input type = "text" name = "main_course" size = "26">
    </td>
    </tr>
-   <%--This is the last name row of the table, where the user
-can input their first name.The limited input for chars is 20.--%>
+  
  <tr>
  <td> Ordered Dessert </td>
  <td align = "left" >  <input type = "text" name = "dessert" size = "26" >  </td>
@@ -126,7 +126,7 @@ all the customer's first name in a drop down menu. Then closes the database. .--
   }
    %>
    <%--This opens the data base and selects from the custormer's table and retrieves
- all the custormer's last name and display 
+ all the custormer's last name, executes the query. Then displays 
 all the customer's last name in a drop down menu. Then closes the database. .--%>
     <%
   try {
@@ -218,7 +218,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
     out.println(e);
   }
    %>
-   <%--This opens the data base and implements the sql statement.
+   <%--This opens the data base and executes the sql statement.
   The sql select statement selects all data from the menu table
   where the value in the description_main_course column is not a null value.--%>
    <%
@@ -246,7 +246,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
     out.println(e);
   }
    %>
-   <%--This opens the data base and implements the sql statement.
+   <%--This opens the data base and executes the sql statement.
   The sql select statement selects all data from the menu table
   where the value in the description_dessert column is not a null value.--%>
    <%

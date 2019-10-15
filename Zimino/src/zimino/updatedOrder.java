@@ -42,16 +42,21 @@ String sql ="select  c.customer_id, o.ordered_id, c.first, c.last, o.drink, o.ap
 "FROM customer c inner JOIN ordered o on c.customer_id = o.ordered_id";
 
 //The ordered table holds all the customer's orders.
-//This sql statement will update the customer's order based the items on his/her already order
-//and the tip the customer's placed. 
+//This sql statement will update the customer's order based the items he/she already ordered
+//and the tip the customer placed. 
 //The sql statement is used to replace the old order with the customer's new order. 
 String usql =(" UPDATE ordered set drink=?, appetizers=?, main_course=?, dessert=?, tip =? \r\n" + 
 " where drink=? and appetizers=? and main_course= ? and dessert=? and tip =? ");
 
 //The customer table stores the customer's first and last name. This will update the customer's name.
+//The customer's first and last name is being updated simultaneous as the ordered table 
+//because this will update the new order and replace the old order 
+//at the row with the old order's primary key value and foreign key value. So, the update 
+//query dose not create a new row with in the database with a different primary key value
+//and foreign key value for the updating an existing row.
 String upsql ="UPDATE customer set first =?, last =? where first =? and last =?";
 
-		//Sets the response on the content type
+		//Sets the the responsive type to html 
 		response.setContentType("text/html"); 
 		PrintWriter out = response.getWriter();
 
@@ -59,6 +64,7 @@ String upsql ="UPDATE customer set first =?, last =? where first =? and last =?"
 		
 
 //This gets the input data from the form on the updateOrder.jsp
+
 			// Get data from form and convert to int for the tip the user enters.
 int New_tip= Integer.parseInt(request.getParameter("New_tip"));
 		String New_first_name = request.getParameter("New_first_name");
@@ -134,7 +140,7 @@ out.println("<title>Menu</title>\r\n" +
 "<td>First Name</td><td>Last Name</td><td>Drink</td><td>Appetizer</td><td>Main course</td><td>Dessert</td>\r\n" + 
 "</tr>");
 
-//This table will display the updated customer's name and the updated customer's order and tip.
+//This table will display the updated customer's name and the updated customer's order.
 while (rs.next()) {
 out.println("<tr>");
 out.println("<td>" + rs.getString("c.first") + "</td>");

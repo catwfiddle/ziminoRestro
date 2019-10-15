@@ -19,7 +19,7 @@ public class Ordered extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
-	static final String PASS = "replaceme"; //put in your own database password
+	static final String PASS = "Rainy22**"; //put in your own database password
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
