@@ -141,7 +141,7 @@ out.println("<td><input type=\"checkbox\" name=\"cancel_item\" value=\"" + rs.ge
 			
 			// end of table 
 			out.println("</table>");
-out.println("<input type = \"submit\" value = \"Submit\" >");
+out.println("<input style=\"float:right\"; type = \"submit\" value = \"Submit\" >");
 out.println("</form>");
 out.println("</div>");
 out.println("</div>");
