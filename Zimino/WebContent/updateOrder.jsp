@@ -42,18 +42,18 @@
    <div class = "center">
    <div class = "LeftText">
 
-   <h1 style = "font-size:138%;" > Change your order </h1>
-   <h1 style = "font-size:100%;" > Please enter your placed order and add your new order.  </h1>
+   <h3> Change order</h3>
    <%--This is the place order table.The post uses Order.java.--%>
    <form action = "updatedOrder" method = "post" >
  
    
   
    <%--This does not give the table a border outline.--%>
-   <table border = "0">
-    <tr>
-     <tr>    
-    <tr>
+   <table border = "0" cellspacing = "2"> <tr>
+     <tr>  
+     <th colspan = "3"> Enter the placed order:</th> 
+    </tr>
+    <tr> 
  <td> First name </td>
  <td align = "left">  <input type = "text" name = "first" size = "26"></td>
    </tr>
@@ -91,7 +91,9 @@
    </tr>
 
    
-
+  <tr>  
+     <th colspan = "3"> Place new order:</th> 
+    </tr>
 
 <%--This opens the data base and selects from the custormer's table and retrieves
  all the custormer's first name and display 
