@@ -23,20 +23,19 @@ public class Order extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	// database URL
-	static final String DB_URL = "jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	static final String DB_URL = "jdbc:mysql://localhost/zimino";
 
 	// Database credentials
 	static final String USER = "root";
 
-	static final String PASS = "password";
+	static final String PASS = "Rainy22**";
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		// Sql statements
-//This selects the the customer's first and last name from the customer's table and it also
-//drink, appetizers, main_course, dessert and tip from the ordered table. This is used to
-//display the customer's order after the customer's inputs his/her information and selects the order.
+//This selects the the customer's first and last name from the customer's table. This is used to
+//display the customer's order after the customer inputs his/her information and selects the order.
 String sql = "select  c.customer_id, c.first, c.last, o.drink, o.appetizers, o.main_course, o.dessert, o.tip\r\n" + 
 "FROM customer c inner JOIN ordered o on c.customer_id = o.ordered_id";
 //This inserts the customer's orders into the ordered table. The data for the food items are retrieved from the 
@@ -137,7 +136,7 @@ out.println("</div></div>\r\n" +
 "<br/>\r\n" + 
 "\r\n" + 
 "<div id=\"footer\">\r\n" + 
-"<p> Copyright ï¿½ 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
+"<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
 " <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\">\r\n" + 
 " Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>\r\n" + 
 "  </div>");

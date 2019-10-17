@@ -26,7 +26,7 @@ public class updatedOrder extends HttpServlet {
 
 	// Database credentials
 	static final String USER = "root";
-	static final String PASS = "password";
+	static final String PASS = "Rainy22**";
 	
 
 	
@@ -41,20 +41,11 @@ public class updatedOrder extends HttpServlet {
 String sql ="select  c.customer_id, o.ordered_id, c.first, c.last, o.drink, o.appetizers, o.main_course, o.dessert, o.tip\r\n" + 
 "FROM customer c inner JOIN ordered o on c.customer_id = o.ordered_id";
 
-//The ordered table holds all the customer's orders.
-//This sql statement will update the customer's order based the items he/she already ordered
-//and the tip the customer placed. 
-//The sql statement is used to replace the old order with the customer's new order. 
-String usql =(" UPDATE ordered set drink=?, appetizers=?, main_course=?, dessert=?, tip =? \r\n" + 
-" where drink=? and appetizers=? and main_course= ? and dessert=? and tip =? ");
-
-//The customer table stores the customer's first and last name. This will update the customer's name.
-//The customer's first and last name is being updated simultaneous as the ordered table 
-//because this will update the new order and replace the old order 
-//at the row with the old order's primary key value and foreign key value. So, the update 
-//query dose not create a new row with in the database with a different primary key value
-//and foreign key value for the updating an existing row.
-String upsql ="UPDATE customer set first =?, last =? where first =? and last =?";
+//This is used for updating the customer and his/her order. 
+String updatedSql= ("UPDATE customer c join ordered o on c.customer_id = o.ordered_id \r\n" + 
+"set c.first =?, c.last =? , o.drink=?, o.appetizers=?, o.main_course=?, o.dessert=?, o.tip =?\r\n" + 
+" where c.first =? and  c.last =? and o.drink=? and o.appetizers=? \r\n" + 
+" and o.main_course= ? and o.dessert=? and o.tip =?");
 
 		//Sets the the responsive type to html 
 		response.setContentType("text/html"); 
@@ -82,25 +73,23 @@ String first = request.getParameter("first");
 			int tipped = Integer.parseInt (request.getParameter("tipped"));
 
 //These are setter statements used for the sql query for execution. 
-PreparedStatement pstmt = conn.prepareStatement(usql);
-pstmt.setString (1, New_drink);
-			pstmt.setString(2, New_appetizers);
-			pstmt.setString(3, New_main_course);
-			pstmt.setString(4, New_dessert);
-pstmt.setInt(5, New_tip);
-pstmt.setString (6, drink);
-			pstmt.setString(7, appetizers);
-			pstmt.setString(8, main_course);
-			pstmt.setString(9, dessert);
-pstmt.setInt(10, tipped);
+PreparedStatement pstmt = conn.prepareStatement(updatedSql);
+pstmt.setString(1, New_first_name);
+pstmt.setString(2, New_last_name);
+pstmt.setString (3, New_drink);
+pstmt.setString(4, New_appetizers);
+pstmt.setString(5, New_main_course);
+pstmt.setString(6, New_dessert);
+pstmt.setInt(7, New_tip);
+pstmt.setString(8, first);
+pstmt.setString(9, last);
+pstmt.setString (10, drink);
+pstmt.setString(11, appetizers);
+pstmt.setString(12, main_course);
+pstmt.setString(13, dessert);
+pstmt.setInt(14, tipped);
 pstmt.executeUpdate();
 
-pstmt =  conn.prepareStatement(upsql);
-pstmt.setString(1, New_first_name);
-			pstmt.setString(2, New_last_name);
-pstmt.setString(3, first);
-			pstmt.setString(4, last);
-pstmt.executeUpdate();
 
 			pstmt= conn.prepareStatement(sql);
 ResultSet rs = pstmt.executeQuery(sql); 
@@ -161,7 +150,7 @@ out.println("</div></div>\r\n" +
 "<br/>\r\n" + 
 "\r\n" + 
 "<div id=\"footer\">\r\n" + 
-"<p> Copyright ï¿½ 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
+"<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
 " <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\">\r\n" + 
 " Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>\r\n" + 
 "  </div>");

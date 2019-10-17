@@ -70,7 +70,7 @@
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Rkdwldns1994");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
@@ -105,7 +105,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "password");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
@@ -137,7 +137,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "password");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
@@ -166,7 +166,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "password");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
@@ -210,7 +210,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    factitious Zimino Restaurant database website.--%>
    <div id = "footer" >
    <p>
-  Copyright © 2019 Zimino.All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
+  Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
    <a href = "https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/" >
   Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a>  <br/>  <br/>
  </div>

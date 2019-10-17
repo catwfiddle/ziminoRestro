@@ -21,12 +21,11 @@ import javax.servlet.http.HttpServletResponse;
 public class Cancel extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	static final String DB_URL = "jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-
+	static final String DB_URL = "jdbc:mysql://localhost/zimino";
 	// Database credentials
 	static final String USER = "root";
 
-	static final String PASS = "password"; //put in your own database password
+	static final String PASS = "Rainy22**"; //put in your own database password
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -56,10 +55,10 @@ for (int i=0; i< cancel_item_orderID.length; i++)
 {
 				  System.out.println("Order ID to be cancelled :" +  cancel_item_orderID[i]);
 }
+//SQL queries is used for deleting the customer and the customer's order.
 
-//SQL queries : Using two separate sql due to unable to combine two
-String customer_del_sql = "DELETE FROM customer WHERE customer_id = ?";  // Delete from customer table
-String ordered_del_sql = "DELETE FROM ordered WHERE ordered_id = ?";     // Delete from ordered table
+String delSql = "DELETE FROM customer, ordered USING customer INNER JOIN ordered\n" + 
+"WHERE customer.customer_id = ordered.ordered_id  AND customer.customer_id = ? and ordered.ordered_id = ?";
 
 		// Set response content type
 		response.setContentType("text/html"); 
@@ -78,10 +77,10 @@ for(int i = 0; i < cancel_item_orderID.length; i++ )
    {
    	   if(j==0)
    	   {  
-   	      pstmt[i][j] = conn.prepareStatement(customer_del_sql);
+   	      pstmt[i][j] = conn.prepareStatement(delSql);
    	   }else {
-   	      pstmt[i][j] = conn.prepareStatement(ordered_del_sql);
-   	   }
+   	     pstmt[i][j] = conn.prepareStatement(delSql);
+   	    }
    }
 } 
 
@@ -91,6 +90,8 @@ for (int i=0; i< cancel_item_orderID.length; i++)
   for(int j =0; j < 2; j++)
   {
 	     pstmt[i][j].setString(1, cancel_item_orderID[i]);
+	     pstmt[i][j].setString(2, cancel_item_orderID[i]);
+	     
 	   }
 }
 
@@ -99,6 +100,7 @@ for(int i=0; i < cancel_item_orderID.length; i++)
 {
    for(int j =0; j < 2; j++) {
       pstmt[i][j].executeUpdate();
+      
    }
 }
 
@@ -108,7 +110,7 @@ for(int i=0; i < cancel_item_orderID.length; i++)
 			out.println("<html>");
 			out.println("<head>");
 			out.println("<meta charset='ISO-8859-1'>");
-			out.println("<title>View all orders</title>");
+			out.println("<title>Cancelled orders</title>");
 			out.println("<link rel='stylesheet' href='zimino_stylesheet.css'> ");
 			out.println("</head>");
 			out.println("<body>");
@@ -132,18 +134,19 @@ out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a>
 			out.println("</header>");
 			out.println("<br/>");
 			out.println("<img src='logo.gif' class='centerpic'>");
+			out.println("<br/>\r\n" + 
+			"<img src=\"food7.jpg\" class=\"centerpic2\">\r\n" + 
+			"<br/>"); 
 			out.println("<body>");
-			out.println("</br></br>");
 out.println("<div class = \"center\">\r\n");
 out.println("<div class = \"LeftText\">");
-out.println("<h2>Cancel Order</h2>");
-out.println("Orders successfully cancelled");
+out.println("<h3>Orders successfully cancelled.</h3>");
 out.println("</div>");
 out.println("</div>");
-out.println("   <br/>  <br/>  <br/>  <br/>  <br/>  <br/>   "
+out.println("   <br/>  <br/>  <br/>   "
 + "<div id = \"footer\" >\n" + 
 "   <p>\n" + 
-"  Copyright © 2019 Zimino.All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\n" + 
+"  Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\n" + 
 "   <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\" >\n" + 
 "  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a>  <br/>  <br/>");
 			out.println("</div>");

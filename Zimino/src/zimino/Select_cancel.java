@@ -21,12 +21,12 @@ import javax.servlet.http.HttpServletResponse;
 public class Select_cancel extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	static final String DB_URL = "jdbc:mysql://localhost/zimino?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	static final String DB_URL = "jdbc:mysql://localhost/zimino";
 
 	// Database credentials
 	static final String USER = "root";
 
-	static final String PASS = "password"; //put in your own database password
+	static final String PASS = "Rainy22**"; //put in your own database password
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -80,7 +80,7 @@ pstmt.setString(2, last);
 			out.println("<html>");
 			out.println("<head>");
 			out.println("<meta charset='ISO-8859-1'>");
-			out.println("<title>View all orders</title>");
+			out.println("<title>Cancel orders</title>");
 			out.println("<link rel='stylesheet' href='zimino_stylesheet.css'> ");
 			out.println("</head>");
 			out.println("<body>");
@@ -105,8 +105,8 @@ out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a>
 			out.println("<br/>");
 			out.println("<img src='logo.gif' class='centerpic'>");
 			out.println("</br>");
-			out.println("<body>");
-out.println("</br></br>");
+			out.println("<img src='food5.jpg' class='centerpic3'>");
+						out.println("<body>");
 out.println("<div class = \"center\">\r\n");
 out.println("<div class = \"LeftText\">");
 out.println("<h2>Cancel Order</h2>");
@@ -117,11 +117,11 @@ out.println("<h2>Cancel Order</h2>");
 			out.println("<table border=1 class='centerTable'>");
 			out.println("<tr>");
 			out.println("<th>Check</th>");
-			out.println("<th>Order ID</th>");
+			out.println("<th>Order number</th>");
 			out.println("<th>Name</th>");
-			out.println("<th>drink</th><th>appetizer</th>");
-			out.println("<th>main_course</th><th>dessert</th>");
-			out.println("<th>tip</th>");
+			out.println("<th>Drink</th><th>Appetizer</th>");
+			out.println("<th>Main course</th><th>Dessert</th>");
+			out.println("<th>Tip</th>");
 			out.println("</tr>");
 			
 			// create row with data for each row from result set
@@ -148,7 +148,7 @@ out.println("</div>");
 out.println("   <br/>  <br/>  <br/>  <br/>  <br/>  <br/>   "
 + "<div id = \"footer\" >\n" + 
 "   <p>\n" + 
-"  Copyright Â© 2019 Zimino.All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\n" + 
+"  Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\n" + 
 "   <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\" >\n" + 
 "  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a>  <br/>  <br/>");
 			out.println("</div>");

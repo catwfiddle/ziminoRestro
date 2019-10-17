@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import = "java.sql.*" %>
-    <%@ page import="zimino.Cancel" %>
+     <%@ page import="zimino.Cancel" %>
+   
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +32,9 @@
 </header>
 <br/>
 <img src="logo.gif" class="centerpic">
+<br/>
+<img src="food4.jpg" class="centerpic2">
+<br/>
 
 <div class = "center">
 <div class = "LeftText">
@@ -54,6 +58,8 @@
 
 </div>
 </div>
+<br/> <br/><br/>
+
 
 <div id="footer">
 <p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
