@@ -15,7 +15,6 @@ Running this project: <br/>
 -Run create_zimino_schema.sql to initialize the zimino schema. <br/>
 -Import the zimino tables: <br/>
 -Click on Server, from the drop down list, select Data Import then select Import from Self-Contained File, and import the <br/>zimino_customer.sql, zimino_menu.sql, zimino_ordered.sql files into the zimino database. <br/>
--Run the zimino_view_insert_scrpit.sql to create the view and populate the menu table.<br/>
 -In Eclipse enterprise version:<br/>
 -Import the Zimino folder to initialize the Zimino website project. <br/>
 -Change the passwords in the Java Servlet files, order.jsp, and updateOrder.jsp.<br/>
