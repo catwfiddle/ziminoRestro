@@ -95,7 +95,7 @@ pstmt.executeUpdate();
 ResultSet rs = pstmt.executeQuery(sql); 
 
 out.println("<!DOCTYPE HTML><html><body>");
-out.println("<title>Menu</title>\r\n" + 
+out.println("<title>Updated Order</title>\r\n" + 
 "<link rel=\"stylesheet\" href=\"zimino_stylesheet.css\"> \r\n" + 
 "</head>\r\n" + 
 "<body>\r\n" + 
