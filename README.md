@@ -14,10 +14,11 @@ Running this project: <br/>
 -In MySQL workbench from the Zimino schema folder: <br/>
 -Run create_zimino_schema.sql to initialize the zimino schema. <br/>
 -Import the zimino tables: <br/>
--Click on Server, from the drop down list, select Data Import then select Import from Self-Contained File, and import the <br/>zimino_customer.sql, zimino_menu.sql, zimino_ordered.sql files into the zimino database. <br/>
+-Click on Server, from the drop down list, select Data Import then select Import from Self-Contained File, and import the <br/>zimino_schema.sql into the zimino database. Click on the Import Progress tab and the Start Import button to import the <br/>zimino_schema.sql file into the Zimino database. This initializes the tables, populates the tables with data and creates a view in the ordered table.<br/>
 -In Eclipse enterprise version:<br/>
--Import the Zimino folder to initialize the Zimino website project. <br/>
--Change the passwords in the Java Servlet files, order.jsp, and updateOrder.jsp.<br/>
+-Change the passwords in Cancel.java, Order.java, Ordered.java, Select_cancel.java, updatedOrder.java, order.jsp, and updateOrder.jsp.<br/>
+-Run the welcome.html webpage to initialize the Zimino database website.<br/>
+
 
 Project documentation link: <br/>
 https://docs.google.com/document/d/e/2PACX-1vTnGBHAReT0j6U9DU1NtN_Yz7vXcb8G4aZmaHR7oU7-CXqo4ux8K-NbzzkWgxw59fGu4rP9s7uaE3tT/pub<br/>
