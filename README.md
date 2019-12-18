@@ -1,4 +1,4 @@
-# cst_363_project
+# 
 Shelly Sun, Andrew Bell, Jasper Kolp<br/>
 Project: part 2<br/>
 This is a factitious Zimino Italian Restaurant Database project for the <a href="https://csumb.edu/course/cst/363">CST 363 (Introduction to Database Systems) </a> class at CSUMB. <br/><br/> 
@@ -17,13 +17,8 @@ Running this project: <br/>
 -Click on Server, from the drop down list, select Data Import then select Import from Self-Contained File, and import the <br/>zimino_schema.sql into the zimino database. Click on the Import Progress tab and the Start Import button to import the <br/>zimino_schema.sql file into the Zimino database. This initializes the tables, populates the tables with data and creates a view in the ordered table.<br/>
 -In Eclipse enterprise version:<br/>
 -Change the passwords in Cancel.java, Order.java, Ordered.java, Select_cancel.java, updatedOrder.java, order.jsp, and updateOrder.jsp.<br/>
--Run the welcome.html webpage to initialize the Zimino database website.<br/>
-
-
-Project documentation link: <br/>
-https://docs.google.com/document/d/e/2PACX-1vTnGBHAReT0j6U9DU1NtN_Yz7vXcb8G4aZmaHR7oU7-CXqo4ux8K-NbzzkWgxw59fGu4rP9s7uaE3tT/pub<br/>
-
-Reference<br/>
+-Run the welcome.html webpage to initialize the Zimino database website.
+<br>Reference<br/>
 Antiche Sere Osteria Enoteca - Bevagna. (n.d.). Retrieved from 	<br/>
 https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/<br/>
 Google Maps. (n.d.). Retrieved from https://www.google.com/maps<br/>
