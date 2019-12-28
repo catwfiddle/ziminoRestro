@@ -4,6 +4,31 @@
   <artifactId>Zimino</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+ <dependencies>
+<dependency>
+         <groupId>javax</groupId>
+         <artifactId>javaee-web-api</artifactId>
+         <version>6.0</version>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.34</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.commons.dbcp.BasicDataSource"</groupId>
+         <artifactId>ClearDB</artifactId>
+         <version>5.6 </version>
+      </dependency>
+     
+<dependency>
+    <groupId>javax.script</groupId>
+    <artifactId>script-api</artifactId>
+    <version>1.0</version>
+</dependency>
+      </dependencies>
+      
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
