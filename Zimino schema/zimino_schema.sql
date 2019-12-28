@@ -33,7 +33,6 @@ CREATE TABLE `customer` (
   PRIMARY KEY (`customer_id`),
   KEY `menu_id` (`menu_id`),
   KEY `ordered_id` (`ordered_id`),
-  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`),
   CONSTRAINT `customer_ibfk_2` FOREIGN KEY (`ordered_id`) REFERENCES `ordered` (`ordered_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -57,17 +56,18 @@ DROP TABLE IF EXISTS `menu`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `menu` (
   `menu_id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` int(11) DEFAULT NULL,
   `description_drink` tinytext,
   `description_appetizers` tinytext,
   `description_main_course` tinytext,
   `description_dessert` tinytext,
-  `ordered_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`menu_id`),
-  KEY `ordered_id` (`ordered_id`),
-  KEY `customer_id` (`customer_id`),
-  CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`ordered_id`) REFERENCES `ordered` (`ordered_id`),
-  CONSTRAINT `menu_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `ordered` (`customer_id`)
+  `appetizers_infor` tinytext,
+  `main_course_infor` tinytext,
+  `dessert_infor` tinytext,
+  `drink_price` float DEFAULT NULL,
+  `appetizers_price` float DEFAULT NULL,
+  `main_course_price` float DEFAULT NULL,
+  `dessert_price` float DEFAULT NULL,
+  PRIMARY KEY (`menu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -77,7 +77,7 @@ CREATE TABLE `menu` (
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-INSERT INTO `menu` VALUES (1,NULL,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake',NULL),(2,NULL,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake',NULL),(3,NULL,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu',NULL),(4,NULL,'Sprite','Salad','Ravioli alla Aragosta',NULL,NULL),(5,NULL,'Fanta','Panzerotti','Linguine Di Granchio',NULL,NULL),(6,NULL,'Coffee',NULL,'Spiedini di polpettine',NULL,NULL),(7,NULL,'Wine',NULL,'Vegetariana',NULL,NULL),(8,NULL,'Tea',NULL,'Fradiavola',NULL,NULL);
+INSERT INTO `menu` VALUES (1,'Italian soda','Calamari Fritti','Spaghetti Al Salmone','Chocolate cake','Fried calamari','Salmon Spaghetti in Alfredo sauce',NULL,3,15.95,15.95,4),(2,'Coke','Carpaccio di salmone','Fettuccine ai Gamberoni','Cheesecake','Thin slices of smoked salmon with lemon and oil','Prawns Fettuccine in Alfredo sauce',NULL,1.5,13.95,16.25,5),(3,'Diet Coke','Bruschetta','Linguine con Gamberetti','Tiramisu','Fresh tomatoes with oil, garlic, and vinegar served on Italian bread','Shrimp Linguine in white wine sauce',NULL,1.5,8.95,16.25,5),(4,'Sprite','Salad','Ravioli alla Aragosta',NULL,'Greens, croutons, nuts, parmesan, Italian Vinaigrette dressing','Lobster ravioli in a red sauce',NULL,1.5,10.59,16.95,NULL),(5,'Fanta','Panzerotti','Linguine Di Granchio',NULL,'small tomato, ham, mozzarella calzone, deep fried','Crab linguine in a pink sauce',NULL,1.5,8.95,20.95,NULL),(6,'Coffee',NULL,'Spiedini di polpettine',NULL,NULL,'Spaghetti and meatballs with red sauce',NULL,3,NULL,11.95,NULL),(7,'Wine',NULL,'Vegetariana',NULL,NULL,'Pizza with mozzarella, eggplant, tomatoes, mushrooms',NULL,5,NULL,15.95,NULL),(8,'Tea',NULL,'Fradiavola',NULL,NULL,'Pizza with Italian sausage, pepperoni, mushrooms, red onions',NULL,3,NULL,16.95,NULL);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -100,8 +100,7 @@ CREATE TABLE `ordered` (
   PRIMARY KEY (`ordered_id`),
   KEY `customer_id` (`customer_id`),
   KEY `menu_id` (`menu_id`),
-  CONSTRAINT `ordered_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
-  CONSTRAINT `ordered_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`)
+  CONSTRAINT `ordered_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -126,6 +125,10 @@ SET @saved_cs_client     = @@character_set_client;
 /*!50001 CREATE VIEW `tips_view` AS SELECT 
  1 AS `tip`*/;
 SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping routines for database 'zimino'
+--
 
 --
 -- Final view structure for view `tips_view`
@@ -154,4 +157,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-17 13:54:13
+-- Dump completed on 2019-12-28  2:25:25

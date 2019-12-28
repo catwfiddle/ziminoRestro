@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 public class Ordered extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	static final String DB_URL = "jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true";
+	static final String DB_URL = "jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"
++"/heroku_b01827419a058ba?sslmode=require";
 	// Database credentials
 	static final String USER = "be288940c00efd";
 
 	static final String PASS = "ca32fc8c**"; //put in your own database password
-       
-
+            
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
