@@ -64,7 +64,9 @@
 <div id="footer">
 <p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
  <a href = "https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/">
- Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><br/><br/>
+ Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a>
+ <a href = "https://github.com/catwfiddle/ziminoRestro" >
+  Our project on Github. </a><br/><br/>
   </div>
 <body>
 
