@@ -1,6 +1,6 @@
 # 
 Shelly Sun, Andrew Bell, Jasper Kolp<br/>
-Project: part 2<br/>
+
 This is a factitious Zimino Italian Restaurant Database project for the <a href="https://csumb.edu/course/cst/363">CST 363 (Introduction to Database Systems) </a> class at CSUMB. <br/><br/> 
 <center>
 <img src="https://github.com/catwfiddle/ziminoRestro/blob/master/Documentation/Zimino_sceenShots/ZimnoGIf.gif?raw=true" alt="Zimino webpages gif slideshow" >
