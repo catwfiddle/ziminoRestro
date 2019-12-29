@@ -21,12 +21,12 @@ import javax.servlet.http.HttpServletResponse;
 public class Select_cancel extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	static final String DB_URL = "jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"
-+"/heroku_b01827419a058ba?sslmode=require";
-	// Database credentials
-	static final String USER = "be288940c00efd";
+	static final String DB_URL = "jdbc:mysql://localhost/zimino";
 
-	static final String PASS = "ca32fc8c**"; //put in your own database password
+	// Database credentials
+	static final String USER = "root";
+
+	static final String PASS = "Rainy22**"; //put in your own database password
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -89,15 +89,15 @@ pstmt.setString(2, last);
 			out.println("<div class='topnav'>");
 			out.println("<nav>");
 			out.println("<ul>");
-out.println("<li><a href= 'http://localhost:8080/Zimino/welcome.html'>Welcome</a></li>");
-out.println("<li><a href= 'http://localhost:8080/Zimino/menu.html' >Menu</a></li>");
+out.println("<li><a href= 'http://localhost:8081/Zimino/welcome.html'>Welcome</a></li>");
+out.println("<li><a href= 'http://localhost:8081/Zimino/menu.html' >Menu</a></li>");
 out.println("<!--The Reservations does not have a web page. It just links to opentable.com-->");
 out.println("<li><a href = 'https://www.opentable.com' > Reservations  </a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/order.jsp'>Order</a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/updateOrder.jsp'>Change Order</a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/cancel.jsp'>Cancel order</a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>");
-out.println("<li><a href='http://localhost:8080/Zimino/Connect.html'>Connect</a></li>");
+out.println("<li><a href='http://localhost:8081/Zimino/order.jsp'>Order</a></li>");
+out.println("<li><a href='http://localhost:8081/Zimino/updateOrder.jsp'>Change Order</a></li>");
+out.println("<li><a href='http://localhost:8081/Zimino/cancel.jsp'>Cancel order</a></li>");
+out.println("<li><a href='http://localhost:8081/Zimino/ordered'>View all orders</a></li>");
+out.println("<li><a href='http://localhost:8081/Zimino/Connect.html'>Connect</a></li>");
 			out.println("</ul>");
 			out.println("</nav>");
 			out.println("</div>");
@@ -150,8 +150,8 @@ out.println("   <br/>  <br/>  <br/>  <br/>  <br/>  <br/>   "
 "   <p>\n" + 
 "  Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\n" + 
 "   <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\" >\n" + 
-"  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a>  <a href = \"https://github.com/catwfiddle/ziminoRestro\" >\r\n" + 
-"  Our project on Github. <br/>  <br/>");
+"  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a> <a href = \"https://github.com/catwfiddle/ziminoRestro\" >\r\n" + 
+"  Our project on Github. </a> <br/>  <br/>");
 			out.println("</div>");
 			out.println("</body></html>");
 

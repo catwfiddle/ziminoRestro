@@ -21,12 +21,13 @@ import javax.servlet.http.HttpServletResponse;
 public class updatedOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	static final String DB_URL = "jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true";
-	// Database credentials
-	static final String USER = "be288940c00efd";
+	// database URL
+	static final String DB_URL = "jdbc:mysql://localhost/zimino";
 
-	static final String PASS = "ca32fc8c**"; //put in your own database password
-  
+	// Database credentials
+	static final String USER = "root";
+	static final String PASS = "Rainy22**";
+	
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -103,14 +104,14 @@ out.println("<title>Updated Order</title>\r\n" +
 "<div class=\"topnav\">\r\n" + 
 "<nav>\r\n" + 
 "<ul>\r\n" + 
-"  <li><a href= \"http://localhost:8080/Zimino/welcome.html\">Welcome</a></li>\r\n" + 
-"  <li><a href= \"http://localhost:8080/Zimino/meun.html\" >Menu</a></li>\r\n" + 
+"  <li><a href= \"http://localhost:8081/Zimino/welcome.html\">Welcome</a></li>\r\n" + 
+"  <li><a href= \"http://localhost:8081/Zimino/meun.html\" >Menu</a></li>\r\n" + 
 "      <li><a href = \"https://www.opentable.com\" > Reservations  </a></li>"+
-"  <li><a href=\"http://localhost:8080/Zimino/order.jsp\">Order</a></li>\r\n" + 
-" <li><a href=\"http://localhost:8080/Zimino/updateOrder.jsp\">Change Order</a></li>"+
-"<li><a href='http://localhost:8080/Zimino/cancel.jsp'>Cancel order</a></li>"+
-"<li><a href='http://localhost:8080/Zimino/ordered'>View all orders</a></li>"+
-"  <li><a href=\"http://localhost:8080/Zimino/Connect.html\">Connect</a></li>\r\n" + 
+"  <li><a href=\"http://localhost:8081/Zimino/order.jsp\">Order</a></li>\r\n" + 
+" <li><a href=\"http://localhost:8081/Zimino/updateOrder.jsp\">Change Order</a></li>"+
+"<li><a href='http://localhost:8081/Zimino/cancel.jsp'>Cancel order</a></li>"+
+"<li><a href='http://localhost:8081/Zimino/ordered'>View all orders</a></li>"+
+"  <li><a href=\"http://localhost:8081/Zimino/Connect.html\">Connect</a></li>\r\n" + 
 "</ul>\r\n" + 
 "</nav>\r\n" + 
 "</div>\r\n" + 
@@ -151,9 +152,8 @@ out.println("</div></div>\r\n" +
 "<div id=\"footer\">\r\n" + 
 "<p> Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.\r\n" + 
 " <a href = \"https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/\">\r\n" + 
-" Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a> <a href = \"https://github.com/catwfiddle/ziminoRestro\" >\r\n" + 
-"  Our project on Github.<br/><br/>\r\n" + 
-
+" Photography credit: Antiche Sere Osteria Enoteca, Bevagna.</a><a href = \"https://github.com/catwfiddle/ziminoRestro\" >\r\n" + 
+"  Our project on Github. </a><br/><br/>\r\n" + 
 "  </div>");
 			out.println("</body></html>");
 			

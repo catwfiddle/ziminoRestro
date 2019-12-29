@@ -19,15 +19,15 @@
  <div class="topnav">
 <nav>
 <ul>
-  <li><a href= "http://localhost:8080/Zimino/welcome.html">Welcome</a></li>
-  <li><a href= "http://localhost:8080/Zimino/menu.html" >Menu</a></li>
+  <li><a href= "http://localhost:8081/Zimino/welcome.html">Welcome</a></li>
+  <li><a href= "http://localhost:8081/Zimino/menu.html" >Menu</a></li>
    <!--The Reservations does not have a web page. It just links to opentable.com-->
       <li><a href = "https://www.opentable.com" > Reservations  </a></li>
-  <li><a href="http://localhost:8080/Zimino/order.jsp">Order</a></li>
-  <li><a href="http://localhost:8080/Zimino/updateOrder.jsp">Change Order</a></li>
-  <li><a href="http://localhost:8080/Zimino/cancel.jsp">Cancel order</a></li>
-  <li><a href="http://localhost:8080/Zimino/ordered">View all orders</a></li>
-  <li><a href="http://localhost:8080/Zimino/Connect.html">Connect</a></li>
+  <li><a href="http://localhost:8081/Zimino/order.jsp">Order</a></li>
+  <li><a href="http://localhost:8081/Zimino/updateOrder.jsp">Change Order</a></li>
+  <li><a href="http://localhost:8081/Zimino/cancel.jsp">Cancel order</a></li>
+  <li><a href="http://localhost:8081/Zimino/ordered">View all orders</a></li>
+  <li><a href="http://localhost:8081/Zimino/Connect.html">Connect</a></li>
 </ul>
 </nav>
 </div>
@@ -70,7 +70,7 @@
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
@@ -104,8 +104,8 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
 
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
@@ -136,8 +136,8 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
 
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
@@ -166,8 +166,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
 
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
@@ -213,8 +212,7 @@ data is retrieved, then it is displayed in a drop down menu. Then the databse is
    <p>
   Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
    <a href = "https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/" >
-  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a> 
-  <a href = "https://github.com/catwfiddle/ziminoRestro" >
+  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a> <a href = "https://github.com/catwfiddle/ziminoRestro" >
   Our project on Github. </a> <br/>  <br/>
  </div>
  </body>

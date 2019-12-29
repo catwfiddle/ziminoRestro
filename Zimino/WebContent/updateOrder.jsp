@@ -101,8 +101,7 @@ all the customer's first name in a drop down menu. Then closes the database. .--
   <% 
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     
     ResultSet rs = s.executeQuery("select * from customer where first IS NOT NULL");
@@ -133,8 +132,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
     <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from customer where last IS NOT NULL");
      %>
@@ -165,8 +163,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_drink IS NOT NULL");
      %>
@@ -200,8 +197,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_appetizers IS NOT NULL");
      %>
@@ -229,8 +225,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_main_course IS NOT NULL");
      %>
@@ -258,8 +253,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <%
   try {
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection("jdbc:mysql://be288940c00efd:ca32fc8c@us-cdbr-iron-east-05.cleardb.net/heroku_b01827419a058ba?reconnect=true"+"/heroku_b01827419a058ba?sslmode=require", "be288940c00efd", "ca32fc8c");
-
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/zimino", "root", "Rainy22**");
     Statement s = conn.createStatement();
     ResultSet rs = s.executeQuery("select * from menu where description_dessert IS NOT NULL");
      %>
@@ -304,8 +298,7 @@ all the customer's last name in a drop down menu. Then closes the database. .--%
    <p>
   Copyright © 2019 Zimino. All Rights Reserved for Shelly Sun, Andrew Bell, Jasper Kolp.
    <a href = "https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/" >
-  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a>   
-   <a href = "https://github.com/catwfiddle/ziminoRestro" >
+  Photography credit: Antiche Sere Osteria Enoteca, Bevagna. </a> </a> <a href = "https://github.com/catwfiddle/ziminoRestro" >
   Our project on Github. </a> <br/>  <br/>
  </div>
  </body>
