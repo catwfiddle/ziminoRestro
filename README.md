@@ -10,11 +10,11 @@ This is a factitious Zimino Italian Restaurant Database project for the <a href=
 
 
 <br>Reference<br/>
-<font size="10">
+<p style="font-size:10px">
 Antiche Sere Osteria Enoteca - Bevagna. (n.d.). Retrieved from 	<br/>
 https://www.facebook.com/Antiche-Sere-Osteria-Enoteca-Bevagna-907749329293919/<br/>
 Google Maps. (n.d.). Retrieved from https://www.google.com/maps<br/>
 Restaurants in Italy - TripAdvisor. (n.d.). Retrieved from <br/>
 https://www.tripadvisor.com/Restaurants-g187768-Italy.html<br/>
 Top 10 Best Italian Restaurant in San Francisco, CA. (n.d.). Retrieved from <br/>
-https://www.yelp.com/search?find_desc=Italian%20Restaurant&find_loc=San%20Francisco%2C%20CA&start=30</font><br/>
+https://www.yelp.com/search?find_desc=Italian%20Restaurant&find_loc=San%20Francisco%2C%20CA&start=30</p><br/>
